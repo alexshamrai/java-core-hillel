@@ -5,6 +5,7 @@ public class SimpleCalculator {
     public static void main(String[] args) {
         int a = 6;
         int b = 456;
+        int c = 456;
 
         // Sum
         // Print to console
@@ -12,6 +13,9 @@ public class SimpleCalculator {
         // Distraction
         // Print to console
 
+        //TBD
+        //TBD
+        //TBD
         //TBD
     }
 }
