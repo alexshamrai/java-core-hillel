@@ -12,4 +12,11 @@ public class Movie {
         String instanceType = this.getClass().getSimpleName();
         System.out.println(title + "is a" + instanceType + " movie");
     }
+
+    @Override
+    public String toString() {
+        return "Movie{" +
+                "title='" + title + '\'' +
+                '}';
+    }
 }
