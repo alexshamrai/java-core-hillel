@@ -1,5 +1,6 @@
-package org.example.lesson11;
+package org.example.lesson12;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class TestStudent {
@@ -11,5 +12,13 @@ public class TestStudent {
 
         Arrays.sort(students);
         System.out.println(Arrays.toString(students));
+
+
+
+    }
+
+    public void myNonStaticMethod() {
+        var list = new ArrayList<String>();
+        GenericsExample.testList(list);
     }
 }

@@ -1,4 +1,4 @@
-package org.example.lesson11;
+package org.example.lesson12;
 
 public class ComparableExample {
 
