@@ -21,6 +21,10 @@ public class StoreEmployee extends Employee {
         return "%-10s%s".formatted(store, super.toString());
     }
 
+    public String getStore() {
+        return store;
+    }
+
     public class StoreEmployeeComparator<T extends StoreEmployee> implements Comparator<StoreEmployee> {
 
         @Override

@@ -36,5 +36,34 @@ public class EmployeeTest {
         for (var employee : storeEmployees) {
             System.out.println(employee);
         }
+
+        printStoreEmployeeWithPosition(storeEmployees);
+    }
+
+    private static void printStoreEmployeeWithPosition(List<StoreEmployee> storeEmployees) {
+        String positionTitle = "Position: ";
+
+        class CustomStoreEmployeeWithPosition extends StoreEmployee {
+
+            private String position;
+            private StoreEmployee originalInstance;
+
+            public CustomStoreEmployeeWithPosition(String position, StoreEmployee originalInstance) {
+                super(originalInstance.getEmployeeId(), originalInstance.getName(), originalInstance.getYearStarted(), originalInstance.getStore());
+                this.position = position;
+            }
+
+            @Override
+            public String toString() {
+                return String.format("%-10s %s %s %s", getStore(), super.toString(), positionTitle, position);
+            }
+        }
+
+        // Print employees with position
+        System.out.println("Store employee with position");
+        for (StoreEmployee e : storeEmployees) {
+            var customEmployee = new CustomStoreEmployeeWithPosition( "manager", e);
+            System.out.println(customEmployee);
+        }
     }
 }
