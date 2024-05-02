@@ -27,6 +27,14 @@ public class Employee {
                 '}';
     }
 
+    public int getEmployeeId() {
+        return employeeId;
+    }
+
+    public int getYearStarted() {
+        return yearStarted;
+    }
+
     public static class EmployeeComparator<T extends Employee> implements Comparator<Employee> {
 
         @Override
