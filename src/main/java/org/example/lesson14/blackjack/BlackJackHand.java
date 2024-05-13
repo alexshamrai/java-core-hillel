@@ -12,7 +12,25 @@ public class BlackJackHand {
     }
 
     public int getValue() {
-        return 0; //TODO implement logic
+        int value = 0;
+        int numberOfAces = 0;
+
+        for (Card card : cards) {
+            switch (card.getRank()) {
+                case TWO, THREE, FOUR, FIVE, SIX, SEVEN, EIGHT, NINE, TEN -> value += card.getRank().ordinal() + 2;
+                case JACK, QUEEN, KING -> value += 10;
+                case ACE -> {
+                    value += 11;
+                    numberOfAces++;
+                }
+            }
+        }
+
+        while (value > 21 && numberOfAces > 0) {
+            value -= 10;
+            numberOfAces--;
+        }
+        return value;
     }
 
     public boolean isBusted() {
