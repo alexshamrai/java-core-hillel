@@ -11,6 +11,8 @@ public class Melon {
         this.weight = weight;
     }
 
+    public Melon() {}
+
     public Melon(String type, int weight, String origin) {
         this(type, weight);
         this.origin = origin;
