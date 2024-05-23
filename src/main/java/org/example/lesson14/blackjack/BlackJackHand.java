@@ -11,6 +11,10 @@ public class BlackJackHand {
         cards = new ArrayList<>();
     }
 
+    public List<Card> getCards() {
+        return cards;
+    }
+
     public int getValue() {
         int value = 0;
         int numberOfAces = 0;
